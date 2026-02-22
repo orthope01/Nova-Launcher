@@ -1,0 +1,54 @@
+{
+  "name": "novalauncher",
+  "version": "2026.1.0",
+  "description": "NovaLauncher — Minecraft launcher with Legacy-style logic (full access, server connect, Microsoft auth)",
+  "main": "src/main/main.js",
+  "author": "NovaLauncher",
+  "license": "MIT",
+  "copyright": "© 2026 NovaLauncher",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "node-fetch": "^2.7.0",
+    "extract-zip": "^2.0.1",
+    "adm-zip": "^0.5.10",
+    "uuid": "^9.0.0",
+    "semver": "^7.5.4",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.novalauncher.app",
+    "productName": "NovaLauncher",
+    "icon": "build/icon.ico",
+    "files": [
+      "src/**/*",
+      "build/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": "nsis",
+      "artifactName": "NovaLauncher-Setup-${version}.exe",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "NovaLauncher"
+    }
+  }
+}

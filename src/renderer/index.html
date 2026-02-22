@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https:; img-src 'self' data: blob: https:;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Launcher</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ══ Titlebar ══ -->
+  <div class="titlebar">
+    <img class="titlebar-icon" src="data:image/png;base64,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" alt="">
+    <span class="titlebar-title">Nova Launcher</span>
+    <div class="titlebar-drag"></div>
+    <div class="titlebar-controls">
+      <!-- Minimize -->
+      <button class="tb-btn" id="btn-minimize" title="Свернуть">
+        <svg width="12" height="12" viewBox="0 0 12 12">
+          <rect x="1" y="5.5" width="10" height="1.5" rx="0.75" fill="currentColor"/>
+        </svg>
+      </button>
+      <!-- Maximize / Restore -->
+      <button class="tb-btn" id="btn-maximize" title="Развернуть">
+        <svg width="12" height="12" viewBox="0 0 12 12" id="icon-maximize">
+          <rect x="1.5" y="1.5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+      </button>
+      <!-- Close -->
+      <button class="tb-btn tb-close" id="btn-close" title="Закрыть">
+        <svg width="12" height="12" viewBox="0 0 12 12">
+          <line x1="1.5" y1="1.5" x2="10.5" y2="10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10.5" y1="1.5" x2="1.5" y2="10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ Sidebar ══ -->
+  <div class="sidebar">
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <button class="nav-item active" data-page="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        <span class="nav-label">Главная</span>
+      </button>
+      <button class="nav-item" data-page="profiles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        <span class="nav-label">Профили</span>
+      </button>
+      <button class="nav-item" data-page="folders">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <span class="nav-label">Файлы</span>
+      </button>
+      <button class="nav-item" data-page="versions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span class="nav-label">Версии</span>
+        <span class="nav-badge" id="nav-badge-versions" style="display:none">!</span>
+      </button>
+      <button class="nav-item" data-page="mods">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span class="nav-label">Моды</span>
+      </button>
+      <button class="nav-item" data-page="accounts">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="nav-label">Аккаунты</span>
+      </button>
+      <button class="nav-item" data-page="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="nav-label">Настройки</span>
+      </button>
+    </nav>
+    <div class="sidebar-version" id="sidebar-ver">Nova v3.0.0</div>
+  </div>
+
+  <!-- ══ Content ══ -->
+  <div class="content" id="content"></div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

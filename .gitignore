@@ -1,0 +1,8 @@
+node_modules/
+dist/
+build/
+*.pak
+*.dll
+*.dat
+*.bin
+app.asar
